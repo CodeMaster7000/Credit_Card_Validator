@@ -12,7 +12,7 @@ bool isNumberString(const string& s) {
 }
 int main() {
     string ccNumber;
-    cout << "Welcome to Credit Card Validator, brought to you by CodeMaster7000 Studios." << endl;
+    cout << "Welcome to Credit_Card_Validator, brought to you by CodeMaster7000 Studios." << endl;
     while (true) {
         cout << "Enter a CC number to validate: ";
         cin >> ccNumber;
