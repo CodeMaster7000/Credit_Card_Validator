@@ -1,4 +1,4 @@
-# Credit Card Validator
+# Credit_Card_Validator
 
 ## About
 
