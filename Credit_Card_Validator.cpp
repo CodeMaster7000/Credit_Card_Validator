@@ -11,28 +11,28 @@ bool isNumberString(const string& s) {
     return true;
 }
 int main() {
-    string ccNumber;
+    string ccnumber;
     cout << "Welcome to Credit_Card_Validator, brought to you by CodeMaster7000 Studios." << endl;
     while (true) {
-        cout << "Enter a CC number to validate: ";
-        cin >> ccNumber;
-        if (ccNumber == "exit")
+        cout << "Enter a credit number to validate: ";
+        cin >> ccnumber;
+        if (ccnumber == "exit")
             break;
-        else if (!isNumberString(ccNumber)) {
+        else if (!isNumberString(ccnumber)) {
             cout << "Invalid input.";
             continue;
         }
-        int len = ccNumber.length();
+        int len = ccnumber.length();
         int doubleEvenSum = 0;
         for (int i = len - 2; i >= 0; i = i - 2) {
-            int dbl = ((ccNumber[i] - 48) * 2);
+            int dbl = ((ccnumber[i] - 48) * 2);
             if (dbl > 9) {
                 dbl = (dbl / 10) + (dbl % 10);
             }
             doubleEvenSum += dbl;
         }
         for (int i = len - 1; i >= 0; i = i - 2) {
-            doubleEvenSum += (ccNumber[i] - 48);
+            doubleEvenSum += (ccnumber[i] - 48);
         }
         cout << (doubleEvenSum % 10 == 0 ? "Valid." : "Invalid.") << endl;
         continue;        
